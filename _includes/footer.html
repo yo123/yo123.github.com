@@ -198,9 +198,13 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+ 
   gtag('js', new Date());
 
-  gtag('config', 'G-HP9NJ41V61');
+  // mock lang as user id
+  gtag('config', 'G-HP9NJ41V61',{
+  'user_id': navigator.language || navigator.browserLanguage || "zh-CN"
+  });
 </script>
 
 <!-- Google Analytics -->
